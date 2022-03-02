@@ -11,7 +11,7 @@ const PizzaSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  pizzaName: {
+  size: {
     type: String,
     default: 'Large',
   },
