@@ -17,7 +17,7 @@ request.onsuccess = function (event) {
   // a connection, save reference to db in gloabal variable
   db = event.target.result;
 
-  // check if ap is online, if yes run uploadPizza() to send all local db data to api
+  // check if app is online, if yes run uploadPizza() to send all local db data to api
   if (navigator.onLine) {
     uploadPizza();
   }
@@ -70,7 +70,7 @@ function uploadPizza() {
           // open one more transaction
           const transaction = db.transaction(['new_pizza'], 'readwrite');
           // access the new_pizza object store
-          const pizzaObjectStore = transaction.objectStore('new_Pizza');
+          const pizzaObjectStore = transaction.objectStore('new_pizza');
           // clear all items in your store
           pizzaObjectStore.clear();
 
